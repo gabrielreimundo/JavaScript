@@ -18,8 +18,31 @@
     </style>
 </head>
 <body>
-    <div id="area">
+    <div id="area" onclick="clicar()">
         Interaja...
     </div>
+    <script>
+        function clicar() {
+            var a = document.querySelector('div#area')
+            a.innerText = 'clicou'
+            a.style.background = 'yellow'
+        }
+        /*
+        funções são linhas de codigos que precisam ser acionadas para serem executadas
+        ex
+            function ação(parametro){
+                bloco
+            }
+
+        eventos DOM
+
+        mouseenter = quando o mause entra em cima da div
+        mousemove = quando o mause se move dentro da div
+        mousedown = quando o mause é apertado
+        mouseup = quandod o mause é solto apos ser apertado
+        click = aperta solta rapido
+        mouseout = quando o mause sai de dentro da div
+        */
+    </script>
 </body>
 </html>
