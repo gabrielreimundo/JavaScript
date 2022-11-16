@@ -18,14 +18,22 @@
     </style>
 </head>
 <body>
-    <div id="area" onclick="clicar()">
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
         Interaja...
     </div>
     <script>
+        var a = document.querySelector('div#area')
         function clicar() {
-            var a = document.querySelector('div#area')
             a.innerText = 'clicou'
             a.style.background = 'yellow'
+        }
+        function entrar(){
+            a.innerText = 'entrou'
+            a.style.background = 'red'
+        }
+        function sair(){
+            a.innerText = 'Saiu'
+            a.style.background = 'aquamarine'
         }
         /*
         funções são linhas de codigos que precisam ser acionadas para serem executadas
