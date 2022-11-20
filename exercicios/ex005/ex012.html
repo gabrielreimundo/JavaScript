@@ -9,6 +9,9 @@
         *{
             font-family: Arial, Helvetica, sans-serif;
         }
+        p{
+            display: inline;
+        }
     </style>
 </head>
 <body>
@@ -23,7 +26,10 @@
             var txtv = document.querySelector('input#txtvel')
             var res = document.querySelector('div#res')
             var vel = Number(txtv.value)
-            res.innerHTML = 'Sua velocidade é de '+vel
+            res.innerHTML = '<p>Sua velocidade é de </p>'+vel+'<p>km/h</p>'
+            if(vel > 60){
+                res.innerHTML += '<p> ,voce foi <strong>MULTADO</strong> por excesso de velocidade</p>'
+            }
         }
     </script>
 </body>
