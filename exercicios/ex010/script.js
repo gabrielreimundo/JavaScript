@@ -1,11 +1,23 @@
 function contar(){
-    var ini = document.getElementById('inicio')
-    var fim = document.getElementById('fim')
-    var pa = document.getElementById('passo')
-    var res = document.getElementById('res')
-    var c = 0
-    while (ini <= fim){
-      c = ini + pa
-      res.innerHTML = '...'+ c
+    let ini = document.getElementById('txti')
+    let fim = document.getElementById('txtf')
+    let passo = document.getElementById('txtp')
+    let res = document.getElementById('res')
+
+    if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0){
+      window.alert('[ERRO] Faltam dados !')
+    } else {
+        res.innerHTML = 'Contando: '
+        let i = Number(ini.value)
+        let f = Number(fim.value)
+        let p = Number(passo.value)
+
+        for(let c = i; c <= f; c += p) {
+            res.innerHTML += ` ${c} \u{1F633}	`
+        }
     }
 }
+ //var c = 0
+    //while (ini <= fim){
+     // c = ini + passo
+      //res.innerHTML = '...'+ c
