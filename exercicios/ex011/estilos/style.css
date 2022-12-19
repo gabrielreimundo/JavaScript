@@ -5,6 +5,10 @@ body {
     font:  normal 15pt Arial;
 }
 
+p{
+    display: inline-block;
+}
+
 header {
     color: white;
     text-align: center;
