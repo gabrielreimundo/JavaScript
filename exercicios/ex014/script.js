@@ -1,21 +1,28 @@
-function add() {
-    let num = document.getElementById('txtn')
-    let selc = document.getElementById('selnum')
-    let val = []
+let num = document.getElementById('txtn')
+let selc = document.getElementById('selnum')
+let res = document.querySelector('div#res')
+let val = []
 
-    if (num.value.length == 0) {
-        window.alert('Por favor, digite um número!')
+function isNumero(n) {
+    if(Number(n) >= 1 && Number(n) <= 100) {
+        return true
     } else {
-        val.push(num.value)
-        let item = document.createElement('option')
-        item.text = `Valor ${val} adicionado`
+        return false
     }
 }
-/*var campo = document.querySelector("input")
-var but = document.querySelector("button")
-var medicamentos = [];
 
-but.onclick = function(){
-    medicamentos.push(campo.value);
-    console.log(medicamentos);
-}*/
+function inLista(n, l) {
+    if (l.indexOf(Number(n)) != -1) {
+        return true
+    } else {
+        return false
+    }
+}
+
+function add() {
+    if (isNumero(num.value) && !inLista(num.value)) {
+        
+    } else {
+        window.alert('Valor invalido!')
+    }
+}

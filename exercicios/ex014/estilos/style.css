@@ -13,6 +13,10 @@ input#f {
     display: block;
 }
 
+select#selnum{
+    width: 150px;
+}
+
 header {
     color: white;
     text-align: center;
